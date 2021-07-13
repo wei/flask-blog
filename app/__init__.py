@@ -40,7 +40,7 @@ class UserModel(db.Model):
 
 @app.route("/")
 def index():
-    return render_template("index.html", title="MLH Fellow", url="localhost:5000")
+    return render_template("index.html", title="Wei He", url="localhost:5000")
 
 
 @app.route("/health")
