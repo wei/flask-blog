@@ -15,8 +15,8 @@ assert ()                 # exit if string not found in text
   fi
 }
 
-username=$(shuf -n1  /usr/share/dict/words)
-password=$(shuf -n1  /usr/share/dict/words)
+username="$RANDOM"
+password="$RANDOM"
 wrongpassword="wrongpw"
 
 homepage () { curl -s https://pod-3-3-1-demo.duckdns.org; }
