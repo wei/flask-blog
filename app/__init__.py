@@ -48,7 +48,7 @@ def health():
     return "Works"
 
 
-@app.route("/register", methods=("GET", "POST"))
+@app.route("/registerred", methods=("GET", "POST"))
 def register():
     if request.method == "POST":
         username = request.form.get("username")

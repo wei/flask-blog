@@ -42,3 +42,7 @@ jobs:
 
       - name: Discord success notification
         run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful. Check it out at https://pod-3-3-1-demo.duckdns.org"
+
+      - name: Discord failure notification
+        if: ${{ failure() }}
+        run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Deployment Failed."
