@@ -38,16 +38,14 @@ class UserModel(db.Model):
         return f"<User {self.username}>"
 
 
-@app.route("/")
-def index():
-    return render_template("index.html", title="Wei He", url="localhost:5000")
+# @app.route("/")
+# def index():
+#     return render_template("index.html", title="Wei He", url="localhost:5000")
 
 
 @app.route("/health")
 def health():
-    wei = UserModel.query.filter_by(username="wei").first()
-    has_wei = "yes" if wei is not None else "no"
-    return f"Works, has_wei: {has_wei}"
+    return "{\"success\":true,\"data\":\"Hello MLH\"}"
 
 
 @app.route("/register", methods=("GET", "POST"))
